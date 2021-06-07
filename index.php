@@ -1,6 +1,8 @@
 <?php
 
 require "App/Bdd/Bdd.php";
+require "App/Bdd/Animaux.php";
+
 require "App/Animaux/Chat.php";
 require "App/Animaux/Chien.php";
 require "App/Animaux/Serpent.php";
@@ -20,10 +22,29 @@ $serpent2 = new Serpent("Michou", "vert clair", 4, "Couleuvre");
 
 $serpent3 = new Serpent("Bella", "taupe", 5, "Vipère");
 
-/* $animaux = Bdd::getInstance()->conn->query('SELECT * FROM animaux');
-foreach ($animaux as $animal) {
-  var_dump($animal);
-} */
+
+$animaux = Animaux::getAllAnimaux();
+$animal = Animaux::getAnimal(1);
+$animauxByCategorie = Animaux::getAnimalByCategorie('Chien');
+
+$animalsList = [];
+
+foreach ($animal as $animal) {
+  if ($animal["categorie"] == "Chat") {
+    $newAnimal = new Chat($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], 
+      $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
+  } else if ($animal["categorie"] == "Chien") {
+    $newAnimal = new Chien($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"],
+      $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
+  } else if ($animal["categorie"] == "Poisson") {
+    $newAnimal = new Poisson($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"]);
+  } else if ($animal["categorie"] == "Reptile") {
+    $newAnimal = new Serpent($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"]);
+  }
+  array_push($animalsList, $newAnimal);
+}
+
+// var_dump($animalsList);
 
 $createCard = new AnimalContent();
 $animals = [$createCard->createCard($chat1), $createCard->createCard($chat2), $createCard->createCard($chien1), $createCard->createCard($chien2)];

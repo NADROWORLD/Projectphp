@@ -41,7 +41,7 @@ class Chat {
     /**
      * Get the value of couleur
      */
-    public function getcouleur()
+    public function getCouleur()
     {
         return $this->couleur;
     }
@@ -49,7 +49,7 @@ class Chat {
     /**
      * Set the value of couleur
      */
-    public function setcouleur(string $couleur): self
+    public function setCouleur(string $couleur): self
     {
         $this->couleur = $couleur;
 
@@ -98,7 +98,7 @@ class Chat {
      */ 
     public function getCompatibleChien()
     {
-            return $this->compatibleChien;
+        return $this->compatibleChien;
     }
 
     /**
@@ -108,9 +108,9 @@ class Chat {
      */ 
     public function setCompatibleChien($compatibleChien)
     {
-            $this->compatibleChien = $compatibleChien;
+        $this->compatibleChien = $compatibleChien;
 
-            return $this;
+        return $this;
     }
 
     /**
@@ -118,7 +118,7 @@ class Chat {
      */ 
     public function getCompatibleEnfants()
     {
-            return $this->compatibleEnfants;
+        return $this->compatibleEnfants;
     }
 
     /**
@@ -128,9 +128,9 @@ class Chat {
      */ 
     public function setCompatibleEnfants($compatibleEnfants)
     {
-            $this->compatibleEnfants = $compatibleEnfants;
+        $this->compatibleEnfants = $compatibleEnfants;
 
-            return $this;
+        return $this;
     }
 
     /**

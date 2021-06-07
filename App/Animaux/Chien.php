@@ -34,7 +34,7 @@ class Chien {
     /**
      * Get the value of couleur
      */
-    public function getcouleur()
+    public function getCouleur()
     {
         return $this->couleur;
     }
@@ -42,7 +42,7 @@ class Chien {
     /**
      * Set the value of couleur
      */
-    public function setcouleur(string $couleur): self
+    public function setCouleur(string $couleur): self
     {
         $this->couleur = $couleur;
 
@@ -91,7 +91,7 @@ class Chien {
      */ 
     public function getCompatibleChat()
     {
-            return $this->compatibleChat;
+        return $this->compatibleChat;
     }
 
     /**
@@ -101,9 +101,9 @@ class Chien {
      */ 
     public function setCompatibleChat($compatibleChat)
     {
-            $this->compatibleChat = $compatibleChat;
+        $this->compatibleChat = $compatibleChat;
 
-            return $this;
+        return $this;
     }
 
     /**
@@ -111,7 +111,7 @@ class Chien {
      */ 
     public function getCompatibleEnfants()
     {
-            return $this->compatibleEnfants;
+        return $this->compatibleEnfants;
     }
 
     /**
@@ -121,9 +121,9 @@ class Chien {
      */ 
     public function setCompatibleEnfants($compatibleEnfants)
     {
-            $this->compatibleEnfants = $compatibleEnfants;
+        $this->compatibleEnfants = $compatibleEnfants;
 
-            return $this;
+        return $this;
     }
 
     /**

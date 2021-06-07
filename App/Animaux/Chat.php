@@ -98,11 +98,7 @@ class Chat {
      */ 
     public function getCompatibleChien()
     {
-<<<<<<< HEAD
         return $this->compatibleChien;
-=======
-            return $this->compatibleChien;
->>>>>>> main
     }
 
     /**
@@ -112,15 +108,9 @@ class Chat {
      */ 
     public function setCompatibleChien($compatibleChien)
     {
-<<<<<<< HEAD
         $this->compatibleChien = $compatibleChien;
 
         return $this;
-=======
-            $this->compatibleChien = $compatibleChien;
-
-            return $this;
->>>>>>> main
     }
 
     /**
@@ -128,11 +118,7 @@ class Chat {
      */ 
     public function getCompatibleEnfants()
     {
-<<<<<<< HEAD
         return $this->compatibleEnfants;
-=======
-            return $this->compatibleEnfants;
->>>>>>> main
     }
 
     /**
@@ -142,12 +128,9 @@ class Chat {
      */ 
     public function setCompatibleEnfants($compatibleEnfants)
     {
-<<<<<<< HEAD
         $this->compatibleEnfants = $compatibleEnfants;
-=======
-            $this->compatibleEnfants = $compatibleEnfants;
 
-            return $this;
+        return $this;
     }
 
     /**
@@ -166,7 +149,6 @@ class Chat {
     public function setCompatibleChat($compatibleChat)
     {
         $this->compatibleChat = $compatibleChat;
->>>>>>> main
 
         return $this;
     }

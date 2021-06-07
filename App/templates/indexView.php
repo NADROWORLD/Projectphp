@@ -12,6 +12,11 @@
 <body>
 
 
+    <div class="d-flex justify-content-between">
+        <?php foreach ($animals as $animal) {
+            echo $animal;
+        } ?>
+    </div>
 </body>
 
 </html>

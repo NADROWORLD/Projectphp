@@ -9,7 +9,7 @@ class Chien {
     private $compatibleChien;
     private $compatibleEnfants;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleChien, boolean $compatibleEnfants)
+    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;

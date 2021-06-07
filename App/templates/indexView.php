@@ -12,7 +12,7 @@
 
 <body class="main">
 
-        <div class="d-flex justify-content-between main">
+        <div class="d-flex justify-content-around">
             <?php foreach ($animals as $animal) {
                 echo $animal;
             } ?>

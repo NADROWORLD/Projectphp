@@ -5,13 +5,17 @@ class Chat {
     private $couleur;
     private $age;
     private $race;
+    private $compatibleChat;
+    private $compatibleChien;
+    private $compatibleEnfants;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChien, bool $compatibleEnfants)
+    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
+        $this->compatibleChat = $compatibleChat;
         $this->compatibleChien = $compatibleChien;
         $this->compatibleEnfants = $compatibleEnfants;
     }
@@ -94,7 +98,11 @@ class Chat {
      */ 
     public function getCompatibleChien()
     {
+<<<<<<< HEAD
         return $this->compatibleChien;
+=======
+            return $this->compatibleChien;
+>>>>>>> main
     }
 
     /**
@@ -104,9 +112,15 @@ class Chat {
      */ 
     public function setCompatibleChien($compatibleChien)
     {
+<<<<<<< HEAD
         $this->compatibleChien = $compatibleChien;
 
         return $this;
+=======
+            $this->compatibleChien = $compatibleChien;
+
+            return $this;
+>>>>>>> main
     }
 
     /**
@@ -114,7 +128,11 @@ class Chat {
      */ 
     public function getCompatibleEnfants()
     {
+<<<<<<< HEAD
         return $this->compatibleEnfants;
+=======
+            return $this->compatibleEnfants;
+>>>>>>> main
     }
 
     /**
@@ -124,7 +142,31 @@ class Chat {
      */ 
     public function setCompatibleEnfants($compatibleEnfants)
     {
+<<<<<<< HEAD
         $this->compatibleEnfants = $compatibleEnfants;
+=======
+            $this->compatibleEnfants = $compatibleEnfants;
+
+            return $this;
+    }
+
+    /**
+     * Get the value of compatibleChat
+     */ 
+    public function getCompatibleChat()
+    {
+        return $this->compatibleChat;
+    }
+
+    /**
+     * Set the value of compatibleChat
+     *
+     * @return  self
+     */ 
+    public function setCompatibleChat($compatibleChat)
+    {
+        $this->compatibleChat = $compatibleChat;
+>>>>>>> main
 
         return $this;
     }

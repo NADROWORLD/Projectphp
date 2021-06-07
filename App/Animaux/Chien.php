@@ -5,14 +5,18 @@ class Chien {
     private $couleur;
     private $age;
     private $race;
+    private $compatibleChat;
+    private $compatibleChien;
+    private $compatibleEnfants;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleEnfants)
+    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleChien, boolean $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
         $this->compatibleChat = $compatibleChat;
+        $this->compatibleChien = $compatibleChien;
         $this->compatibleEnfants = $compatibleEnfants;
     }
 
@@ -87,7 +91,11 @@ class Chien {
      */ 
     public function getCompatibleChat()
     {
+<<<<<<< HEAD
         return $this->compatibleChat;
+=======
+            return $this->compatibleChat;
+>>>>>>> main
     }
 
     /**
@@ -97,9 +105,15 @@ class Chien {
      */ 
     public function setCompatibleChat($compatibleChat)
     {
+<<<<<<< HEAD
         $this->compatibleChat = $compatibleChat;
 
         return $this;
+=======
+            $this->compatibleChat = $compatibleChat;
+
+            return $this;
+>>>>>>> main
     }
 
     /**
@@ -107,7 +121,11 @@ class Chien {
      */ 
     public function getCompatibleEnfants()
     {
+<<<<<<< HEAD
         return $this->compatibleEnfants;
+=======
+            return $this->compatibleEnfants;
+>>>>>>> main
     }
 
     /**
@@ -117,7 +135,31 @@ class Chien {
      */ 
     public function setCompatibleEnfants($compatibleEnfants)
     {
+<<<<<<< HEAD
         $this->compatibleEnfants = $compatibleEnfants;
+=======
+            $this->compatibleEnfants = $compatibleEnfants;
+
+            return $this;
+    }
+
+    /**
+     * Get the value of compatibleChien
+     */ 
+    public function getCompatibleChien()
+    {
+        return $this->compatibleChien;
+    }
+
+    /**
+     * Set the value of compatibleChien
+     *
+     * @return  self
+     */ 
+    public function setCompatibleChien($compatibleChien)
+    {
+        $this->compatibleChien = $compatibleChien;
+>>>>>>> main
 
         return $this;
     }

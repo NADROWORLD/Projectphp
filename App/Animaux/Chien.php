@@ -6,12 +6,14 @@ class Chien {
     private $age;
     private $race;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race)
+    public function __construct(string $nom, string $couleur, int $age, string $race, boolean $compatibleChat, boolean $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
+        $this->compatibleChat = $compatibleChat;
+        $this->compatibleEnfants = $compatibleEnfants;
     }
 
     public function getNom () 
@@ -79,4 +81,44 @@ class Chien {
         return $this;
     }
 
+
+        /**
+         * Get the value of compatibleChat
+         */ 
+        public function getCompatibleChat()
+        {
+                return $this->compatibleChat;
+        }
+
+        /**
+         * Set the value of compatibleChat
+         *
+         * @return  self
+         */ 
+        public function setCompatibleChat($compatibleChat)
+        {
+                $this->compatibleChat = $compatibleChat;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of compatibleEnfants
+         */ 
+        public function getCompatibleEnfants()
+        {
+                return $this->compatibleEnfants;
+        }
+
+        /**
+         * Set the value of compatibleEnfants
+         *
+         * @return  self
+         */ 
+        public function setCompatibleEnfants($compatibleEnfants)
+        {
+                $this->compatibleEnfants = $compatibleEnfants;
+
+                return $this;
+        }
 }

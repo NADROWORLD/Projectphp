@@ -12,6 +12,9 @@ class AnimalContent {
                 <h5 class='card-title'>Age: ".$animal->getAge()."</h5>
                 <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href='#' class='btn btn-primary'>Go somewhere</a>
+                ".if ($animal->getCompatibleChat() === false) { $animal->getNom(). "ne peut pas vivre en compagnie de chats." }."
+                ".if ($animal->getCompatibleChien() === false) { $animal->getNom(). "ne peut pas vivre en compagnie de chiens." }."
+                ".if ($animal->getCompatibleEnfants() === false) { $animal->getNom(). "ne peut pas vivre avec des enfants." }."
             </div>
         </div>";
     }

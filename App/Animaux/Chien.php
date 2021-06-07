@@ -5,7 +5,6 @@ class Chien {
     private $couleurPelage;
     private $age;
     private $race;
-    private $cri = "ouaf";
 
     public function __construct(string $nom, string $couleurPelage, int $age, string $race)
     {
@@ -80,11 +79,4 @@ class Chien {
         return $this;
     }
 
-    /**
-     * Get the value of cri
-     */
-    public function getCri()
-    {
-        return $this->cri;
-    }
 }

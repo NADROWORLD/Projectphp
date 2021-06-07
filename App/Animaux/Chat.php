@@ -6,7 +6,7 @@ class Chat {
     private $age;
     private $race;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, boolean $compatibleChien, boolean $compatibleEnfants)
+    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChien, bool $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
@@ -37,7 +37,7 @@ class Chat {
     /**
      * Get the value of couleur
      */
-    public function getcouleur()
+    public function getCouleur()
     {
         return $this->couleur;
     }
@@ -45,7 +45,7 @@ class Chat {
     /**
      * Set the value of couleur
      */
-    public function setcouleur(string $couleur): self
+    public function setCouleur(string $couleur): self
     {
         $this->couleur = $couleur;
 
@@ -89,43 +89,43 @@ class Chat {
     }
 
 
-        /**
-         * Get the value of compatibleChien
-         */ 
-        public function getCompatibleChien()
-        {
-                return $this->compatibleChien;
-        }
+    /**
+     * Get the value of compatibleChien
+     */ 
+    public function getCompatibleChien()
+    {
+        return $this->compatibleChien;
+    }
 
-        /**
-         * Set the value of compatibleChien
-         *
-         * @return  self
-         */ 
-        public function setCompatibleChien($compatibleChien)
-        {
-                $this->compatibleChien = $compatibleChien;
+    /**
+     * Set the value of compatibleChien
+     *
+     * @return  self
+     */ 
+    public function setCompatibleChien($compatibleChien)
+    {
+        $this->compatibleChien = $compatibleChien;
 
-                return $this;
-        }
+        return $this;
+    }
 
-        /**
-         * Get the value of compatibleEnfants
-         */ 
-        public function getCompatibleEnfants()
-        {
-                return $this->compatibleEnfants;
-        }
+    /**
+     * Get the value of compatibleEnfants
+     */ 
+    public function getCompatibleEnfants()
+    {
+        return $this->compatibleEnfants;
+    }
 
-        /**
-         * Set the value of compatibleEnfants
-         *
-         * @return  self
-         */ 
-        public function setCompatibleEnfants($compatibleEnfants)
-        {
-                $this->compatibleEnfants = $compatibleEnfants;
+    /**
+     * Set the value of compatibleEnfants
+     *
+     * @return  self
+     */ 
+    public function setCompatibleEnfants($compatibleEnfants)
+    {
+        $this->compatibleEnfants = $compatibleEnfants;
 
-                return $this;
-        }
+        return $this;
+    }
 }

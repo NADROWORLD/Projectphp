@@ -22,4 +22,4 @@ $createCard = new AnimalContent();
 $animals = [$createCard->createCard($chat1), $createCard->createCard($chat2), $createCard->createCard($chien1), $createCard->createCard($chien2)];
 
 
-include "templates/indexView.php";
+include "App/templates/indexView.php";

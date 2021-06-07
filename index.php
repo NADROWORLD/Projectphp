@@ -1,5 +1,6 @@
 <?php
 
+require "App/Bdd/Bdd.php";
 require "App/Animaux/Chat.php";
 require "App/Animaux/Chien.php";
 require "App/Animaux/Serpent.php";
@@ -18,6 +19,11 @@ $serpent1 = new Serpent("Filou", "marron et jaune", 3, "Python");
 $serpent2 = new Serpent("Michou", "vert clair", 4, "Couleuvre");
 
 $serpent3 = new Serpent("Bella", "taupe", 5, "Vipère");
+
+/* $animaux = Bdd::getInstance()->conn->query('SELECT * FROM animaux');
+foreach ($animaux as $animal) {
+  var_dump($animal);
+} */
 
 $createCard = new AnimalContent();
 $animals = [$createCard->createCard($chat1), $createCard->createCard($chat2), $createCard->createCard($chien1), $createCard->createCard($chien2)];

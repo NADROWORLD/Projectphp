@@ -2,14 +2,14 @@
 
 class Chat {
     private $nom;
-    private $couleurPelage;
+    private $couleur;
     private $age;
     private $race;
 
-    public function __construct(string $nom, string $couleurPelage, int $age, string $race)
+    public function __construct(string $nom, string $couleur, int $age, string $race)
     {
         $this->nom = $nom;
-        $this->couleurPelage = $couleurPelage;
+        $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
     }
@@ -33,19 +33,19 @@ class Chat {
     }
 
     /**
-     * Get the value of couleurPelage
+     * Get the value of couleur
      */
-    public function getCouleurPelage()
+    public function getcouleur()
     {
-        return $this->couleurPelage;
+        return $this->couleur;
     }
 
     /**
-     * Set the value of couleurPelage
+     * Set the value of couleur
      */
-    public function setCouleurPelage(string $couleurPelage): self
+    public function setcouleur(string $couleur): self
     {
-        $this->couleurPelage = $couleurPelage;
+        $this->couleur = $couleur;
 
         return $this;
     }

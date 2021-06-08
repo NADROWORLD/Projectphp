@@ -5,16 +5,18 @@ class Chat {
     private $couleur;
     private $age;
     private $race;
+    private $description;
     private $compatibleChat;
     private $compatibleChien;
     private $compatibleEnfants;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
+    public function __construct(string $nom, string $couleur, int $age, string $race, string $description, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
+        $this->description = $description;
         $this->compatibleChat = $compatibleChat;
         $this->compatibleChien = $compatibleChien;
         $this->compatibleEnfants = $compatibleEnfants;
@@ -152,4 +154,24 @@ class Chat {
 
         return $this;
     }
+
+        /**
+         * Get the value of description
+         */ 
+        public function getDescription()
+        {
+                return $this->description;
+        }
+
+        /**
+         * Set the value of description
+         *
+         * @return  self
+         */ 
+        public function setDescription($description)
+        {
+                $this->description = $description;
+
+                return $this;
+        }
 }

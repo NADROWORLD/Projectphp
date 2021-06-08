@@ -9,7 +9,7 @@ class AnimalContent {
           <h5 class='card-title'>Nom: <?php echo $animal->getNom(); ?></h5>
           <h5 class='card-title'>Couleur: <?php echo $animal->getCouleur(); ?></h5>
           <h5 class='card-title'>Age: <?php echo $animal->getAge(); ?></h5>
-          <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class='card-text'><?php echo $animal->getDescription(); ?></p>
           <?php if ($animal->getCompatibleChat() === false): ?>
             <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
           <?php endif ?>

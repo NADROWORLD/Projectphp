@@ -15,10 +15,10 @@ $bddAnimauxByCategorie = Animaux::getAnimalByCategorie('Chien');
 
 foreach ($bddAnimaux as $animal) {
   if ($animal["categorie"] == "Chat") {
-    $newAnimal = new Chat($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], 
+    $newAnimal = new Chat($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
       $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
   } else if ($animal["categorie"] == "Chien") {
-    $newAnimal = new Chien($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"],
+    $newAnimal = new Chien($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
       $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
   } else {
     continue;

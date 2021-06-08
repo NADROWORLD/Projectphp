@@ -5,13 +5,15 @@ class Poisson {
     private $couleur;
     private $age;
     private $race;
+    private $description;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race)
+    public function __construct(string $nom, string $couleur, int $age, string $race, string $description)
     {
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
+        $this->description = $description;
     }
 
     /**
@@ -86,4 +88,24 @@ class Poisson {
         return $this;
     }
 
+
+        /**
+         * Get the value of description
+         */ 
+        public function getDescription()
+        {
+                return $this->description;
+        }
+
+        /**
+         * Set the value of description
+         *
+         * @return  self
+         */ 
+        public function setDescription($description)
+        {
+                $this->description = $description;
+
+                return $this;
+        }
 }

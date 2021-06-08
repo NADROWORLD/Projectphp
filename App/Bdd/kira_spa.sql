@@ -61,4 +61,4 @@ INSERT INTO `categories` (`id`, `nom`) VALUES
 (1, 'Chat'),
 (2, 'Chien'),
 (3, 'Poisson'),
-(4, 'Reptiles');
+(4, 'Reptile');

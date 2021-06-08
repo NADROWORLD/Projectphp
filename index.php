@@ -5,7 +5,8 @@ require "App/Bdd/Animaux.php";
 
 require "App/Animaux/Chat.php";
 require "App/Animaux/Chien.php";
-require "App/Animaux/Serpent.php";
+require "App/Animaux/Poisson.php";
+require "App/Animaux/Reptile.php";
 require "App/Content/AnimalContent.php";
 
 $chat1 = new Chat("Minou", "gris", 3, "Siamois", true, true, false);
@@ -16,11 +17,13 @@ $chien1 = new Chien("Pepper", "marron", 5, "Chihuahua", false, false, false);
 
 $chien2 = new Chien("Louna", "fauve charbonnée", 9, "Berger de Shetland", true, true, true);
 
-$serpent1 = new Serpent("Filou", "marron et jaune", 3, "Python");
+$poisson1 = new Poisson("Dory", "bleue et jaune", 3, "Chirurgien bleu");
 
-$serpent2 = new Serpent("Michou", "vert clair", 4, "Couleuvre");
+$reptile1 = new Reptile("Filou", "marron et jaune", 3, "Python");
 
-$serpent3 = new Serpent("Bella", "taupe", 5, "Vipère");
+$reptile2 = new Reptile("Michou", "vert clair", 4, "Couleuvre");
+
+$reptile3 = new Reptile("Bella", "taupe", 5, "Vipère");
 
 
 $animaux = Animaux::getAllAnimaux();
@@ -39,7 +42,7 @@ foreach ($animal as $animal) {
   } else if ($animal["categorie"] == "Poisson") {
     $newAnimal = new Poisson($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"]);
   } else if ($animal["categorie"] == "Reptile") {
-    $newAnimal = new Serpent($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"]);
+    $newAnimal = new Reptile($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"]);
   }
   array_push($animalsList, $newAnimal);
 }

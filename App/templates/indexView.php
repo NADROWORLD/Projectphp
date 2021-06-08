@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./App/templates/css/main.css">
 </head>
 
-<body class="main">
+<body>
 
-        <div class="d-flex justify-content-around">
-            <?php foreach ($animals as $animal) {
-                echo $animal;
-            } ?>
-        </div>
+    <div class="d-flex justify-content-around">
+        <?php foreach ($animals as $animal) {
+            echo $animal;
+        } ?>
+    </div>
 
 </body>
 

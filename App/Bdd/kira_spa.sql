@@ -62,3 +62,26 @@ INSERT INTO `categories` (`id`, `nom`) VALUES
 (2, 'Chien'),
 (3, 'Poisson'),
 (4, 'Reptile');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id`          int(8)       NOT NULL AUTO_INCREMENT,
+  `nom`         varchar(255) NOT NULL,
+  `prenom`      varchar(255) NOT NULL,
+  `mail`        varchar(255) NOT NULL,
+  `password`    varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `nom`, `prenom`, `mail`, `password`) VALUES 
+(1, 'test', 'test', 'test@test.com', '$2y$12$Jwdgr8ejHjsKUFrsQ4XVe.jbx9bxBPwnL7A4H1uUWfG7dwysjcBGu');

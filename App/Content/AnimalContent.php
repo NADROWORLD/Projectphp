@@ -3,7 +3,7 @@
 class AnimalContent {
 
   public function createCard($animal) { ?>
-    <div class='card' style='width: 18rem;'>
+    <div class='card' style='width: 18rem; margin: 0 1rem;'>
       <img src='https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>' class='card-img-top' alt='...'>
       <div class='card-body'>
           <h5 class='card-title'>Nom: <?php echo $animal->getNom(); ?></h5>

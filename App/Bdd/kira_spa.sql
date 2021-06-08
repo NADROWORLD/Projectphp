@@ -71,11 +71,11 @@ INSERT INTO `categories` (`id`, `nom`) VALUES
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `id`          int(8)       NOT NULL AUTO_INCREMENT,
-  `nom`         varchar(255) NOT NULL,
-  `prenom`      varchar(255) NOT NULL,
-  `mail`        varchar(255) NOT NULL,
-  `password`    varchar(255) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 

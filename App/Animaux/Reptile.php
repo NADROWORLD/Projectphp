@@ -1,6 +1,6 @@
 <?php
 
-class Serpent {
+class Reptile {
     private $nom;
     private $couleur;
     private $age;

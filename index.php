@@ -1,5 +1,5 @@
 <?php
-
+include "App/templates/head/head.php";
 require "App/Bdd/Bdd.php";
 require "App/Bdd/Animaux.php";
 

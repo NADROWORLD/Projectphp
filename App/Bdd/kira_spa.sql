@@ -35,10 +35,10 @@ INSERT INTO `animaux` (`id`, `id_categorie`, `nom`, `couleur`, `age`, `race`, `c
 (2, 1, 'Akira', 'noir & blanc', 4, 'Européen', 1, 1, 1),
 (3, 2, 'Pepper', 'marron', 5, 'Chihuahua', 0, 0, 0),
 (4, 2, 'Louna', 'fauve charbonnée', 9, 'Berger de Shetland', 1, 1, 1),
-(5, 4, 'Filou', 'marron et jaune', 3, 'Python', null, null, null),
-(6, 4, 'Michou', 'vert clair', 4, 'Couleuvre', null, null, null),
-(7, 4, 'Bella', 'taupe', 5, 'Vipère', null, null, null);
-
+(5, 3, 'Dory', 'bleue et jaune', 3, 'Chirurgien bleu', null, null, null),
+(6, 4, 'Filou', 'marron et jaune', 3, 'Python', null, null, null),
+(7, 4, 'Michou', 'vert clair', 4, 'Couleuvre', null, null, null),
+(8, 4, 'Bella', 'taupe', 5, 'Vipère', null, null, null);
 
 -- --------------------------------------------------------
 

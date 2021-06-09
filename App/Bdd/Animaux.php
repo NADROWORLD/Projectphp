@@ -3,12 +3,14 @@
 class Animaux extends Bdd {
 
   public static function getAllAnimaux() {
-    return Bdd::getInstance()->conn->query('SELECT *, animaux.nom as nom, categories.nom as categorie 
+    return Bdd::getInstance()->conn->query('SELECT animaux.id, animaux.id_categorie, animaux.nom, animaux.couleur, animaux.age, animaux.race, animaux.description, 
+      animaux.compatibleChat, animaux.compatibleChien, animaux.compatibleEnfants
       FROM animaux INNER JOIN categories ON categories.id = animaux.id_categorie')->fetchAll();
   }
 
   public static function getAnimal(int $idAnimal, ?string $fetchMode = null) {
-    $req = sprintf('SELECT *, animaux.nom as nom, categories.nom as categorie FROM animaux 
+    $req = sprintf('SELECT animaux.id, animaux.id_categorie, animaux.nom, animaux.couleur, animaux.age, animaux.race, animaux.description, 
+      animaux.compatibleChat, animaux.compatibleChien, animaux.compatibleEnfants FROM animaux 
       INNER JOIN categories ON categories.id = animaux.id_categorie
       WHERE animaux.id = %d', $idAnimal);
     $return = Bdd::getInstance()->conn->query($req);
@@ -18,7 +20,7 @@ class Animaux extends Bdd {
       return $return->fetch();
     }
   }
-
+  
   public static function getAnimalByCategorie(string $categorieName) {
     $req = sprintf("SELECT *, animaux.nom as nom, categories.nom as categorie FROM animaux
       INNER JOIN categories ON categories.id = animaux.id_categorie

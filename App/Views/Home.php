@@ -1,5 +1,7 @@
 <?php 
-
+if (isset($bddAnimauxByCategorie)){
+  $bddAnimaux = $bddAnimauxByCategorie;
+}
 foreach ($bddAnimaux as $animal) {
   switch($animal["id_categorie"]){
     case(1):

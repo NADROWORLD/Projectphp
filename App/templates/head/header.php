@@ -7,5 +7,7 @@
     <a href="#reptiles">Reptiles</a>
     <a href="#poissons">Poissons</a>
     <a class="active" href="#home">Accueil</a>
+    <a href="register">S'enregistrer</a>
+    <a href="login">Se connecter</a>
   </div>
 </div>

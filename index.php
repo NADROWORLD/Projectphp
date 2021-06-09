@@ -34,6 +34,12 @@ switch ($_SERVER['REQUEST_URI']):
         $bddAnimauxByCategorie = Animaux::getAnimauxByCategorie('Reptile');
         include "App/Views/Home.php";
         break;
+    case ("/register") :
+        include "App/Views/Register.php";
+        break;
+    case ("/login") :
+        include "App/Views/Login.php";
+        break;
     default:
         $bddAnimauxByCategorie = null;
         include "App/Views/Home.php";

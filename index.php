@@ -6,11 +6,10 @@ require "App/Animaux/Chat.php";
 require "App/Animaux/Chien.php";
 require "App/Animaux/Poisson.php";
 require "App/Animaux/Reptile.php";
+require "App/Content/AnimalContent.php";
 
 include "App/templates/head/head.php";
 include "App/templates/head/header.php";
-include "App/templates/head/footer.php";
-require "App/Content/AnimalContent.php";
 
 $bddAnimaux = Animaux::getAllAnimaux();
 

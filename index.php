@@ -6,11 +6,10 @@ require "App/Animaux/Chat.php";
 require "App/Animaux/Chien.php";
 require "App/Animaux/Poisson.php";
 require "App/Animaux/Reptile.php";
+require "App/Content/AnimalContent.php";
 
 include "App/templates/head/head.php";
 include "App/templates/head/header.php";
-include "App/templates/head/footer.php";
-require "App/Content/AnimalContent.php";
 
 $bddAnimaux = Animaux::getAllAnimaux();
 
@@ -34,6 +33,12 @@ switch ($_SERVER['REQUEST_URI']):
     case ("/reptiles") :
         $bddAnimauxByCategorie = Animaux::getAnimauxByCategorie('Reptile');
         include "App/Views/Home.php";
+        break;
+    case ("/register") :
+        include "App/Views/Register.php";
+        break;
+    case ("/login") :
+        include "App/Views/Login.php";
         break;
     default:
         $bddAnimauxByCategorie = null;

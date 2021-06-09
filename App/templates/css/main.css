@@ -1,13 +1,13 @@
 .main {
-    margin-top: 2rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    text-align: center;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  text-align: center;
 }
 /* NAV BAR */
 .logo {
-    margin:auto ;
-    position: absolute;
+  margin:auto ;
+  position: absolute;
 }
 .navbar {
   overflow: hidden;
@@ -41,4 +41,81 @@
 
 .card {
   display: inline-flex !important;
+}
+
+/* FORM REGISTER */
+.register {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.register input, h1, h2 {
+  margin: 5px;
+}
+
+input {
+  width: 100%;
+  margin: 5px;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+/* FORM LOGIN */
+.page_connection {
+  width: 50%;
+  margin: auto;
+  margin-top: 70px;
+}
+
+input[type=text], input[type=password] {
+  background-color: #CBCBCB;
+  color: white;
+  border-style: none;
+  padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  color: black;
+  background-color: #E1E1E1;
+  transition: all 0.5s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #0098FF;
+  transition: all 0.2s ease-in-out;
+}
+
+input {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.logform {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.logform input, a {
+  margin: 5px;
+}
+
+.row {
+  justify-content: center;
 }

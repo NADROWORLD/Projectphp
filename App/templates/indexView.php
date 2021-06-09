@@ -3,3 +3,7 @@
       echo $animal;
   } ?>
 </div>
+
+<div style="position: relative; bottom:0; padding-top: 50px">
+    <?php require('./App/templates/head/footer.php'); ?>
+</div>

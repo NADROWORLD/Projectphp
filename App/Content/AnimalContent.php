@@ -21,7 +21,7 @@ class AnimalContent {
                 <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
             <?php endif ?>
             <?php endif ?>
-          <a href=<?= "/animal/" . $animal->getId() ?> class='btn btn-primary'>Go somewhere</a>
+          <a href=<?= "/animal/" . $animal->getId() ?> class='btn btn-primary'><?= "En savoir plus sur " . $animal->getNom() ?></a>
       </div>
   </div> 
   <?php }

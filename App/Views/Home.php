@@ -1,19 +1,19 @@
 <?php 
 
 foreach ($bddAnimaux as $animal) {
-  switch($animal["categorie"]){
-    case("Chat"):
+  switch($animal["id_categorie"]){
+    case(1):
       $newAnimal = new Chat($animal["id"], $animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
       $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
       break;
-    case("Chien"):
+    case(2):
       $newAnimal = new Chien($animal["id"], $animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
       $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
       break;
-    case("Poisson"):
+    case(3):
       $newAnimal = new Poisson($animal["id"], $animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"]);
       break;
-    case("Reptile"):
+    case(4):
       $newAnimal = new Reptile($animal["id"], $animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"]);
       break;
     default:

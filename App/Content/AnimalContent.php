@@ -10,16 +10,18 @@ class AnimalContent {
           <h5 class='card-title'>Couleur: <?php echo $animal->getCouleur(); ?></h5>
           <h5 class='card-title'>Age: <?php echo $animal->getAge(); ?></h5>
           <p class='card-text'><?php echo $animal->getDescription(); ?></p>
-          <?php if ($animal->getCompatibleChat() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
-          <?php endif ?>
-            <?php if ($animal->getCompatibleChien() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens</p>
-          <?php endif ?>
-          <?php if ($animal->getCompatibleEnfants() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
-          <?php endif ?>
-          <a href='#' class='btn btn-primary'>Go somewhere</a>
+          <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
+            <?php if ($animal->getCompatibleChat() === false): ?>
+                <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
+            <?php endif ?>
+                <?php if ($animal->getCompatibleChien() === false): ?>
+                <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens</p>
+            <?php endif ?>
+            <?php if ($animal->getCompatibleEnfants() === false): ?>
+                <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
+            <?php endif ?>
+            <?php endif ?>
+          <a href=<?= "/animal/" . $animal->getId() ?> class='btn btn-primary'>Go somewhere</a>
       </div>
   </div> 
   <?php }

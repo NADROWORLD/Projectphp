@@ -1,6 +1,7 @@
 <?php
 
 class Chat {
+    private $id;
     private $nom;
     private $couleur;
     private $age;
@@ -10,8 +11,9 @@ class Chat {
     private $compatibleChien;
     private $compatibleEnfants;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, string $description, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
+    public function __construct(int $id, string $nom, string $couleur, int $age, string $race, string $description, bool $compatibleChat, bool $compatibleChien, bool $compatibleEnfants)
     {
+        $this->id = $id;
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
@@ -20,6 +22,14 @@ class Chat {
         $this->compatibleChat = $compatibleChat;
         $this->compatibleChien = $compatibleChien;
         $this->compatibleEnfants = $compatibleEnfants;
+    }
+
+    /**
+     * Get the value of id
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**

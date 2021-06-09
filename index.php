@@ -13,23 +13,13 @@ include "App/templates/head/footer.php";
 require "App/Content/AnimalContent.php";
 
 $bddAnimaux = Animaux::getAllAnimaux();
-$bddAnimal = Animaux::getAnimal(1);
 $bddAnimauxByCategorie = Animaux::getAnimalByCategorie('Chien');
 
-foreach ($bddAnimaux as $animal) {
-  if ($animal["categorie"] == "Chat") {
-    $newAnimal = new Chat($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
-      $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
-  } else if ($animal["categorie"] == "Chien") {
-    $newAnimal = new Chien($animal["nom"], $animal["couleur"], $animal["age"], $animal["race"], $animal["description"],
-      $animal["compatibleChat"], $animal["compatibleChien"], $animal["compatibleEnfants"]);
-  } else {
-    continue;
-  }
-
-  $createCard = new AnimalContent();
-  $createCard->createCard($newAnimal);
-}
-
-$animals = [];
-include "App/templates/indexView.php";
+switch ($_SERVER['REQUEST_URI']):
+    case (preg_match('/\/animal\/(\d+)/', $_SERVER['REQUEST_URI'], $matches) ? true : false) :
+        $bddAnimal = Animaux::getAnimal($matches[1]);
+        include "App/Views/AnimalProfile.php";
+        break;
+    default:
+        include "App/Views/Home.php";
+endswitch;

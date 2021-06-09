@@ -27,23 +27,52 @@ class AnimalContent {
   <?php }
 
   public function createProfile($animal) { ?>
-    <div class="container-sm">
-        <img src='https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>' class='card-img-top' alt='...'>
-        <h5 class='card-title'>Nom: <?php echo $animal->getNom(); ?></h5>
-        <h5 class='card-title'>Couleur: <?php echo $animal->getCouleur(); ?></h5>
-        <h5 class='card-title'>Age: <?php echo $animal->getAge(); ?></h5>
-        <p class='card-text'><?php echo $animal->getDescription(); ?></p>
-        <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
-        <?php if ($animal->getCompatibleChat() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
-        <?php endif ?>
-            <?php if ($animal->getCompatibleChien() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens</p>
-        <?php endif ?>
-        <?php if ($animal->getCompatibleEnfants() === false): ?>
-            <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
-        <?php endif ?>
-        <?php endif ?>
-    </div> 
+    <div class="container-sm container">
+        <div class="column  align-items-center">
+            <div class="row-sm">
+                <h1 class="display-3">
+                    <?php echo $animal->getNom(); ?>
+                </h1>
+            </div>
+            <div class="row-sm p-5">
+                <img src='https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>' class='card-img-top' alt='...'>
+            </div>
+            <div class="row-sm justify-content-md-center">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Couleur: <?php echo $animal->getCouleur(); ?>
+                    </li>
+                    <li class="list-group-item">
+                        Age: <?php echo $animal->getAge(); ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $animal->getDescription(); ?>
+                    </li>
+                    <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
+                        <?php if ($animal->getCompatibleChat() === false): ?>
+                            <li class="list-group-item">
+                                <?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats
+                            </li>
+                        <?php endif ?>
+                        <?php if ($animal->getCompatibleChien() === false): ?>
+                            <li class="list-group-item">
+                                <?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens
+                            </li>
+                        <?php endif ?>
+                        <?php if ($animal->getCompatibleEnfants() === false): ?>
+                            <li class="list-group-item">
+                                <?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants
+                            </li>
+                        <?php endif ?>
+                    <?php endif ?>
+                </ul>
+            </div>
+            <div class="row-sm bg-primary mt-5 mb-5 p-5">
+                <blockquote class="text-white">Les conditions d'adoption
+                    En adoptant à KIRA SPA, vous acceptez de participer aux frais engendrés par la prise en charge de l’animal dans le cadre d’une adoption responsable dont les soins, l’hébergement, la nourriture, la vaccination, la stérilisation, l'éducation... Vous trouverez aussi auprès de nos équipes des professionnels capables de vous donner les meilleurs conseils pour accueillir votre nouveau compagnon.
+                    Par votre participation financière, vous continuerez à faire grandir notre mouvement de solidarité envers les animaux abandonnés et maltraités.</div>
+            </blockquote>
+            </div>
+    </div>
   <?php }
 }

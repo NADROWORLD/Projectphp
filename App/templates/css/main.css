@@ -119,3 +119,7 @@ input {
 .row {
   justify-content: center;
 }
+
+.bg-primary{
+  background-color: #cc99ff !important;
+}

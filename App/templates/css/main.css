@@ -1,8 +1,8 @@
 .main {
     margin-top: 2rem;
     margin-left: 4rem;
-    display: inline-flex;
-    flex-wrap: wrap;
+    margin-right: 4rem;
+    text-align: center;
 }
 /* NAV BAR */
 .logo {
@@ -15,6 +15,7 @@
   height: 100px;
   border: medium solid #333;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .navbar a {
@@ -25,7 +26,6 @@
   padding: 14px 20px;
   text-decoration: none;
   font-size: 17px;
-  
 }
 
 .navbar a:hover {

@@ -28,7 +28,7 @@ switch ($_SERVER['REQUEST_URI']):
 endswitch;
 ?>
 <div class="navbar">
-  <img class="logo" width=300px; src="./App/templates/img/logo.png" style="z-index: 1">
+  <img class="logo" width=300px; src="/App/templates/img/logo.png" style="z-index: 1">
   <div style="margin-left: auto; margin-right: auto; display: flex; z-index: 2;">  
   <a <?php if($active === "chiens"): ?> class="active" <?php endif ?> href="/chiens">Chiens</a>
   <a <?php if($active === "chats"): ?> class="active" <?php endif ?> href="/chats">Chats</a>

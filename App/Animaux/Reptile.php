@@ -1,19 +1,29 @@
 <?php
 
 class Reptile {
+    private $id;
     private $nom;
     private $couleur;
     private $age;
     private $race;
     private $description;
 
-    public function __construct(string $nom, string $couleur, int $age, string $race, string $description)
+    public function __construct(int $id, string $nom, string $couleur, int $age, string $race, string $description)
     {
+        $this->id = $id;
         $this->nom = $nom;
         $this->couleur = $couleur;
         $this->age = $age;
         $this->race = $race;
         $this->description = $description;
+    }
+
+    /**
+     * Get the value of id
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**

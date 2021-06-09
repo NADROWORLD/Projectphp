@@ -21,10 +21,11 @@ class Animaux extends Bdd {
     }
   }
   
-  public static function getAnimalByCategorie(string $categorieName) {
-    $req = sprintf("SELECT *, animaux.nom as nom, categories.nom as categorie FROM animaux
+  public static function getAnimauxByCategorie(string $categorieName) {
+    $req = sprintf("SELECT animaux.id, animaux.id_categorie, animaux.nom, animaux.couleur, animaux.age, animaux.race, animaux.description, 
+    animaux.compatibleChat, animaux.compatibleChien, animaux.compatibleEnfants FROM animaux
       INNER JOIN categories ON categories.id = animaux.id_categorie
       WHERE categories.nom = '%s'", $categorieName);
-    return Bdd::getInstance()->conn->query($req)->fetch();
+    return Bdd::getInstance()->conn->query($req)->fetchAll();
   }
 }

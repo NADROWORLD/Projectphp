@@ -140,6 +140,55 @@ input {
   background-color: #cc99ff !important;
 }
 
+/* BLOG */
+.blog {
+  padding: 20px;
+}
+
+.card-veille {
+  background-color: #ecf1f8; 
+}
+
+.post-head,
+.post-content {
+  padding: 10px;
+}
+
+.post-content {
+  padding-bottom: 20px;
+} 
+
+.link-blog {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.blog h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.blog h2 a {
+  color: black; 
+  display: block; 
+  text-align: center; 
+  text-decoration: none;
+}
+
+.blog img {
+  display: block; 
+  margin: 0 auto; 
+  width: 75%; 
+  height: auto;
+}
+
+.blog span {
+  display: block; 
+  text-align: center;
+  margin-top: 10px;
+}
+
+
 /* FOOTER */
 footer {
   position: fixed;

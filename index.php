@@ -48,6 +48,9 @@ switch ($_SERVER['REQUEST_URI']):
     case ("/user") :
         include "App/Views/User.php";
         break;
+    case ("/blog") :
+        include "App/Views/Blog.php";
+        break;
     default:
         $bddAnimauxByCategorie = null;
         include "App/Views/Home.php";

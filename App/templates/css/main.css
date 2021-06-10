@@ -1,9 +1,14 @@
+* {
+  font-family: Verdana, sans-serif !important;
+}
+
 .main {
   margin-top: 2rem;
   margin-left: 4rem;
   margin-right: 4rem;
   text-align: center;
 }
+
 
 h1 {
   color: rgb(127, 81, 165);

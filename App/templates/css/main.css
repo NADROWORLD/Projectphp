@@ -54,10 +54,6 @@
   margin: 0 1rem 1rem;
 }
 
-.card:last-child {
-  border: 1px solid red !important;
-}
-
 /* FORM REGISTER */
 .form-title {
   text-align: center; 

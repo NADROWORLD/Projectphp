@@ -4,6 +4,17 @@
   margin-right: 4rem;
   text-align: center;
 }
+
+h1 {
+  color: rgb(127, 81, 165);
+  margin-bottom: 2rem !important;
+}
+
+h2 {
+  color: rgb(143, 114, 167);
+  margin-bottom: 2rem !important;
+}
+
 /* NAV BAR */
 .logo {
   margin:auto ;
@@ -47,6 +58,10 @@
 }
 
 /* END NAV BAR */
+
+.intro {
+  margin: 2rem 2rem 2rem 2rem;
+}
 
 .card {
   display: inline-flex !important;

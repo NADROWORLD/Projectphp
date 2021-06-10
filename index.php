@@ -54,5 +54,6 @@ switch ($_SERVER['REQUEST_URI']):
     default:
         $bddAnimauxByCategorie = null;
         include "App/Views/Carousel.php";
+        include "App/Views/Intro.php";
         include "App/Views/Home.php";
 endswitch;

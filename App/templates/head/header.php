@@ -34,7 +34,7 @@ switch ($_SERVER['REQUEST_URI']):
 endswitch;
 ?>
 <div class="navbar">
-  <img class="logo" width=300px; src="/App/templates/img/logo.png">
+  <img class="logo" width=300px; src="/App/templates/img/logo.png" onclick="redirectHome()"> 
   <div class="nav">  
   <a <?php if($active === "home"): ?> class="active" <?php endif ?> href="/">Accueil</a>
   <a <?php if($active === "chiens"): ?> class="active" <?php endif ?> href="/chiens">Chiens</a>
@@ -50,3 +50,10 @@ endswitch;
   <?php } ?>
   </div>
 </div>
+
+<script>
+  function redirectHome(){
+    location.href ="home";  
+  }
+</script>
+

@@ -64,17 +64,18 @@ if (isset($_POST['bouton']) && !isset($erreur)) {
       $_SESSION['user'] = $row['id'];
     }
 
-    ?>
-    <script>
+    if (isset($_SESSION['user'])) { ?>
+      <script>
         Swal.fire({
           icon: "success",
           title: "Succès!",
           text: "Votre compte à bien été créé",
         }).then(function () {
-          window.location.href = "login";
+          window.location.href = "index";
         });
     </script>
-<?php }
+<?php } 
+}
 
 
 if (isset($_POST['bouton']) && isset($erreur)) {

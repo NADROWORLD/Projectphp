@@ -52,7 +52,7 @@ if (!isset($erreur) && isset($_POST['bouton'])) {
         Swal.fire({
           title: "Succès!",
           icon: "success",
-          text: "Connection Réussi",
+          text: "Connexion Réussi",
         }).then(function () {
           window.location.href = "index";
         });

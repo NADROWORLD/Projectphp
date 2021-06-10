@@ -10,7 +10,7 @@
                       <input name="prenom" type="text" value="" size="30" placeholder="Prénom"/>
                       <input name="email" type="text" value="" size="30" placeholder="Adresse Mail"/>
                       <input name="password" type="password" value="" size="30" placeholder="Mot de Passe"/>                     
-                      <input name="bouton" type="submit" id="sinscrire" value="Valider"
+                      <input class="btn-primary" name="bouton" type="submit" id="sinscrire" value="Valider"
                         onclick="document.forms['myForm'].submit();"/>
                   </form>
               </div>

@@ -15,6 +15,18 @@ h2 {
   margin-bottom: 2rem !important;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: rgb(143, 114, 167) !important;
+  border-color: rgb(143, 114, 167) !important;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: rgb(127, 81, 165) !important;
+  border-color: rgb(127, 81, 165) !important;
+}
+
 /* NAV BAR */
 .logo {
   margin:auto ;
@@ -68,6 +80,7 @@ h2 {
   display: inline-flex !important;
   width: 18rem; 
   margin: 0 1rem 1rem;
+  margin-bottom: 4rem;
 }
 
 /* FORM REGISTER */

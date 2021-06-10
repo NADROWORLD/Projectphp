@@ -31,7 +31,7 @@
 
           <div class="post-content">
             <?php echo implode(' ', array_slice(explode(' ', $description), 0, 20)); ?><br/>
-            <a target="_blank" rel="nofollow noopener" class="link-blog btn btn-info btn-sm" href="<?php echo $link; ?>">
+            <a target="_blank" rel="nofollow noopener" class="link-blog btn btn-primary " href="<?php echo $link; ?>">
               Voir plus
             </a>
           </div>

@@ -3,13 +3,13 @@
 class AnimalContent {
 
   public function createCard($animal) { ?>
-    <div class='card' style='width: 18rem; margin: 0 1rem 1rem;'>
-      <img src='https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>' class='card-img-top' alt='...'>
-      <div class='card-body'>
-          <h5 class='card-title'>Nom: <?php echo $animal->getNom(); ?></h5>
-          <h5 class='card-title'>Couleur: <?php echo $animal->getCouleur(); ?></h5>
-          <h5 class='card-title'>Age: <?php echo $animal->getAge(); ?></h5>
-          <p class='card-text'><?php echo $animal->getDescription(); ?></p>
+    <div class="card">
+      <img src="https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">Nom: <?php echo $animal->getNom(); ?></h5>
+          <h5 class="card-title">Couleur: <?php echo $animal->getCouleur(); ?></h5>
+          <h5 class="card-title">Age: <?php echo $animal->getAge(); ?></h5>
+          <p class="card-text"><?php echo $animal->getDescription(); ?></p>
           <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
             <?php if ($animal->getCompatibleChat() === false): ?>
                 <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
@@ -21,7 +21,7 @@ class AnimalContent {
                 <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
             <?php endif ?>
             <?php endif ?>
-          <a href=<?= "/animal/" . $animal->getId() ?> class='btn btn-primary'><?= "En savoir plus sur " . $animal->getNom() ?></a>
+          <a href=<?= "/animal/" . $animal->getId() ?> class="btn btn-primary"><?= "En savoir plus sur " . $animal->getNom() ?></a>
       </div>
   </div> 
   <?php }
@@ -35,7 +35,7 @@ class AnimalContent {
                 </h1>
             </div>
             <div class="row-sm p-5">
-                <img src='https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>' class='card-img-top' alt='...'>
+                <img src="https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>" class="card-img-top" alt="...">
             </div>
             <div class="row-sm justify-content-md-center">
                 <ul class="list-group">

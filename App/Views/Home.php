@@ -24,5 +24,5 @@ foreach ($bddAnimaux as $animal) {
   $createCard = new AnimalContent();
   $createCard->createCard($newAnimal);
 }
-$animals = [];
+
 include "App/templates/indexView.php";

@@ -8,6 +8,7 @@
 .logo {
   margin:auto ;
   position: absolute;
+  z-index: 1;
 }
 .navbar {
   overflow: hidden;
@@ -16,6 +17,13 @@
   border: medium solid #333;
   margin-bottom: 2rem;
   width: 100%;
+}
+
+.nav {
+  margin-left: auto; 
+  margin-right: auto; 
+  display: flex; 
+  z-index: 2
 }
 
 .navbar a {
@@ -37,13 +45,25 @@
   background-color: #333;
   color: white;
 }
+
 /* END NAV BAR */
 
 .card {
   display: inline-flex !important;
+  width: 18rem; 
+  margin: 0 1rem 1rem;
+}
+
+.card:last-child {
+  border: 1px solid red !important;
 }
 
 /* FORM REGISTER */
+.form-title {
+  text-align: center; 
+  font-size: 2rem;
+}
+
 .register {
   margin: auto;
   display: flex;
@@ -122,4 +142,21 @@ input {
 
 .bg-primary{
   background-color: #cc99ff !important;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: blue;
+  width: 100%;
+  height: 35px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 4px;
 }

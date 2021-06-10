@@ -5,9 +5,9 @@
     $title = $item->title;
     $link = $item->link;
     $description = $item->description;
-    $postDate = $item->pubDate;
     $image = $item->enclosure['url'];
-    $pubDate = date('D, d M Y', strtotime($postDate));
+    $date_raw = date('Y-m-d', time());
+    $pubDate = date('d/m/Y', strtotime('-' . $i . 'day', strtotime($date_raw)));
 
     if ($i >= 11) {
         break;

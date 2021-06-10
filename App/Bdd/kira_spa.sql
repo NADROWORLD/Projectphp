@@ -32,14 +32,14 @@ CREATE TABLE IF NOT EXISTS `animaux` (
 --
 
 INSERT INTO `animaux` (`id`, `id_categorie`, `nom`, `couleur`, `age`, `race`, `description`, `compatibleChat`, `compatibleChien`, `compatibleEnfants`) VALUES
-(1, 1, 'Minou', 'gris', 3, 'Siamois', 'toto', 1, 1, 0),
-(2, 1, 'Akira', 'noir & blanc', 4, 'Européen', 'toto', 1, 1, 1),
-(3, 2, 'Pepper', 'marron', 5, 'Chihuahua', 'toto', 0, 0, 0),
-(4, 2, 'Louna', 'fauve charbonnée', 9, 'Berger de Shetland', 'toto', 1, 1, 1),
-(5, 3, 'Dory', 'bleue et jaune', 3, 'Chirurgien bleu', 'toto', null, null, null),
-(6, 4, 'Filou', 'marron et jaune', 3, 'Python', 'toto', null, null, null),
-(7, 4, 'Michou', 'vert clair', 4, 'Couleuvre', 'toto', null, null, null),
-(8, 4, 'Bella', 'taupe', 5, 'Vipère', 'toto', null, null, null);
+(1, 1, 'Minou', 'gris', 3, 'Siamois', 'Très gentil chat, trouvé dans la rue à Bordeaux. Il lui manque une oreille, mais sa gentillesse compense !', 1, 1, 0),
+(2, 1, 'Akira', 'noir & blanc', 4, 'Européen', 'Akira est très joueur, très jeune dans sa tête, il fera le bonheur de la famille !', 1, 1, 1),
+(3, 2, 'Pepper', 'marron', 5, 'Chihuahua', 'Pepper est un petit chien difficile, mais il donnera tout son amour à l''humain qui lui donnera une chance !', 0, 0, 0),
+(4, 2, 'Louna', 'fauve charbonnée', 9, 'Berger de Shetland', 'Comme tous les shetland, Louna est très sensible, mais très douce et pleine d''amour.', 1, 1, 1),
+(5, 3, 'Dory', 'bleue et jaune', 3, 'Chirurgien bleu', 'Dory est un petit poisson pas du tout peureux, qui osera venir vous toucher le bout du doigt si vous le plongez dans son bocal !', null, null, null),
+(6, 4, 'Filou', 'marron et jaune', 3, 'Python', 'Très beau Python, Filou n''a jamais montré le moindre signe d''agressivité. Il est très doux.', null, null, null),
+(7, 4, 'Michou', 'vert clair', 4, 'Couleuvre', 'Michou est un serpent qui aime bouger et voir ce que vous faites tout le temps. Il aime se poser sur vos épaules et vous accompagner toute la journée.', null, null, null),
+(8, 4, 'Bella', 'taupe', 5, 'Vipère', 'Bella est une vipère magnifique mais très sensible, qui aura du mal au début avec l''extérieur.', null, null, null);
 
 -- --------------------------------------------------------
 

@@ -12,13 +12,13 @@ class AnimalContent {
           <p class="card-text"><?php echo $animal->getDescription(); ?></p>
           <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
             <?php if ($animal->getCompatibleChat() === false): ?>
-                <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats</p>
+                <p><i class="fa fa-sign-in"></i> Ne peut pas vivre en compagnie de chats</p>
             <?php endif ?>
                 <?php if ($animal->getCompatibleChien() === false): ?>
-                <p><?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens</p>
+                <p><i class="fa fa-sign-in"></i> Ne peut pas vivre en compagnie de chiens</p>
             <?php endif ?>
             <?php if ($animal->getCompatibleEnfants() === false): ?>
-                <p><?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants</p>
+                <p><i class="fa fa-sign-in"></i> Ne peut pas vivre avec des enfants</p>
             <?php endif ?>
             <?php endif ?>
           <a href=<?= "/animal/" . $animal->getId() ?> class="btn btn-primary"><?= "En savoir plus sur " . $animal->getNom() ?></a>
@@ -51,17 +51,17 @@ class AnimalContent {
                     <?php if(is_a($animal, "Chien") || is_a($animal, "Chat")): ?>
                         <?php if ($animal->getCompatibleChat() === false): ?>
                             <li class="list-group-item">
-                                <?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chats
+                                <i class="fa fa-sign-in"></i> Ne peut pas vivre en compagnie de chats
                             </li>
                         <?php endif ?>
                         <?php if ($animal->getCompatibleChien() === false): ?>
                             <li class="list-group-item">
-                                <?php echo $animal->getNom(); ?> ne peut pas vivre en compagnie de chiens
+                                <i class="fa fa-sign-in"></i> Ne peut pas vivre en compagnie de chiens
                             </li>
                         <?php endif ?>
                         <?php if ($animal->getCompatibleEnfants() === false): ?>
                             <li class="list-group-item">
-                                <?php echo $animal->getNom(); ?> ne peut pas vivre avec des enfants
+                                <i class="fa fa-sign-in"></i> Ne peut pas vivre avec des enfants
                             </li>
                         <?php endif ?>
                     <?php endif ?>

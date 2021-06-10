@@ -20,6 +20,7 @@ h2 {
   margin:auto ;
   position: absolute;
   z-index: 1;
+  cursor: pointer;
 }
 .navbar {
   overflow: hidden;

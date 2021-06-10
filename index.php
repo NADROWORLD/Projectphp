@@ -1,4 +1,6 @@
 <?php
+
+require "App/session/session.php";
 require "App/Bdd/Bdd.php";
 require "App/Bdd/Animaux.php";
 
@@ -39,6 +41,12 @@ switch ($_SERVER['REQUEST_URI']):
         break;
     case ("/login") :
         include "App/Views/Login.php";
+        break;
+    case ("/logout") :
+        include "App/Views/Logout.php";
+        break;
+    case ("/user") :
+        include "App/Views/User.php";
         break;
     default:
         $bddAnimauxByCategorie = null;

@@ -73,7 +73,7 @@ if (isset($_POST['bouton']) && !isset($erreur)) {
           title: "Succès!",
           text: "Votre compte à bien été créé",
         }).then(function () {
-          window.location.href = "login.php";
+          window.location.href = "login";
         });
     </script>
 <?php }

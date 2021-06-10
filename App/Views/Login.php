@@ -54,7 +54,7 @@ if (!isset($erreur) && isset($_POST['bouton'])) {
           icon: "success",
           text: "Connection Réussi",
         }).then(function () {
-          window.location.href = "index.php";
+          window.location.href = "index";
         });
       </script>  
     <?php }

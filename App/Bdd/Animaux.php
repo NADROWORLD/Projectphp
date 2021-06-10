@@ -28,4 +28,15 @@ class Animaux extends Bdd {
       WHERE categories.nom = '%s'", $categorieName);
     return Bdd::getInstance()->conn->query($req)->fetchAll();
   }
+
+  public static function createUser($nom, $prenom, $mail, $password) {
+    $sql = "INSERT INTO `users` (nom, prenom, mail, password) VALUES (?, ?, ?, ?)";
+    $stmt = Bdd::getInstance()->conn->prepare($sql);
+    $stmt->execute([
+      $nom,
+      $prenom,
+      $mail,
+      $password
+    ]);
+  }
 }

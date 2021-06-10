@@ -17,10 +17,10 @@ if (!isset($_REQUEST['email']) || trim($_REQUEST['email']) === '') {
 }
 
 if (!empty($_REQUEST['email'])) {
-  $reponse = Bdd::getInstance()->conn->query('SELECT mail FROM users WHERE mail = "' . $_POST['email'] . '" ');
+  $reponse = Bdd::getInstance()->conn->query('SELECT COUNT(*) FROM users WHERE mail = "' . $_POST['email'] . '" ');
   $mail = $reponse->fetch();
 
-  if (strtolower($_POST['email']) == strtolower($mail['mail'])) {
+  if ((int) $mail['0'] > 0) {
     $erreur = "Cette adresse de mail est déjà utilisée";
   }
 }
@@ -56,14 +56,12 @@ if (isset($_POST['bouton']) && !isset($erreur)) {
 
     $password = $_POST['password'];
     $hashPassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
-    $hashedPassword = $hashPassword;
 
-     Bdd::getInstance()->conn->exec('INSERT INTO users (nom, prenom, mail, password) 
-      VALUES (' . $nom . ',' . $prenom . ',' . $email . ',' . $hashedPassword . ')');
-    $result = Bdd::getInstance()->conn->query('SELECT * FROM `users` WHERE `mail` LIKE "' . $emailbis . '" AND `password` LIKE "' . $hashPassword . '"');
+    Animaux::createUser($nom, $prenom, $email, $hashPassword);
+    $result = Bdd::getInstance()->conn->query('SELECT * FROM `users` WHERE `mail` LIKE "' . $email . '" AND `password` LIKE "' . $hashPassword . '"');
 
     foreach ($result as $row) {
-      $_SESSION['user'] = $row->id;
+      $_SESSION['user'] = $row['id'];
     }
 
     ?>

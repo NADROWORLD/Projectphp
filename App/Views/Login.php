@@ -46,7 +46,7 @@ if (!isset($erreur) && isset($_POST['bouton'])) {
     foreach ($result as $row) {
       $_SESSION['user'] = $row['id'];
     }
-    var_dump($_SESSION['user']);
+    
     if (isset($_SESSION['user'])) { ?>
       <script>
         Swal.fire({

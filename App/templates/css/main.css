@@ -10,6 +10,11 @@ h1 {
   margin-bottom: 2rem !important;
 }
 
+h2 {
+  color: rgb(143, 114, 167);
+  margin-bottom: 2rem !important;
+}
+
 /* NAV BAR */
 .logo {
   margin:auto ;
@@ -55,7 +60,7 @@ h1 {
 /* END NAV BAR */
 
 .intro {
-  margin: 2rem 2rem 4rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 .card {

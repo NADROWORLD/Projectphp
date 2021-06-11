@@ -1,5 +1,7 @@
 <div class="profile-content">
-  <button class="btn btn-primary" onclick="bookAnimal()">Réverver</button>
+  <?php if (isset($_SESSION['user'])) { ?> 
+    <button class="btn btn-primary" onclick="bookAnimal()">Réverver</button>
+  <?php } ?>
 
   <?php require('./App/templates/head/footer.php'); ?>
 </div>

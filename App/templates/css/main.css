@@ -88,6 +88,14 @@ h2 {
   margin-bottom: 4rem;
 }
 
+.img-profile {
+  width: 75%;
+}
+
+.profile-content {
+  margin-bottom: 150px;
+}
+
 /* FORM REGISTER */
 .form-title {
   text-align: center; 

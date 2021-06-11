@@ -30,14 +30,14 @@ class AnimalContent {
     <div class="container-sm container">
         <div class="column  align-items-center">
             <div class="row-sm">
-                <h1 class="display-3">
+                <h1 class="display-4">
                     <?php echo $animal->getNom(); ?>
                 </h1>
             </div>
-            <div class="row-sm p-5">
-                <img src="https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>" class="card-img-top" alt="...">
+            <div class="row-sm">
+                <img src="https://fakeimg.pl/286x180/?text=<?php echo $animal->getNom(); ?>" class="card-img-top img-profile" alt="...">
             </div>
-            <div class="row-sm justify-content-md-center">
+            <div class="row-sm justify-content-md-center p-5">
                 <ul class="list-group">
                     <li class="list-group-item">
                         Couleur: <?php echo $animal->getCouleur(); ?>
@@ -67,7 +67,7 @@ class AnimalContent {
                     <?php endif ?>
                 </ul>
             </div>
-            <div class="row-sm bg-primary mt-5 mb-5 p-5">
+            <div class="row-sm bg-primary mb-5 p-5">
                 <blockquote class="text-white">Les conditions d'adoption
                     En adoptant à KIRA SPA, vous acceptez de participer aux frais engendrés par la prise en charge de l’animal dans le cadre d’une adoption responsable dont les soins, l’hébergement, la nourriture, la vaccination, la stérilisation, l'éducation... Vous trouverez aussi auprès de nos équipes des professionnels capables de vous donner les meilleurs conseils pour accueillir votre nouveau compagnon.
                     Par votre participation financière, vous continuerez à faire grandir notre mouvement de solidarité envers les animaux abandonnés et maltraités.</div>

@@ -19,5 +19,7 @@ switch($bddAnimal["id_categorie"]){
 }
 $createProfile = new AnimalContent();
 $createProfile->createProfile($newAnimal);
+
+include "App/templates/animalProfileView.php";
 ?>
 

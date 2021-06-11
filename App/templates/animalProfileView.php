@@ -11,7 +11,7 @@
       icon: "success",
       text: "Réservation Terminée",
     }).then(function () {
-      window.location.href = "index";
+      window.location.href = "../index";
     });  
   }
 </script>
